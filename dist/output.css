@@ -713,14 +713,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 120px;
 }
 
-.max-w-\[100px\] {
-  max-width: 100px;
-}
-
-.max-w-\[90px\] {
-  max-width: 90px;
-}
-
 .origin-top-left {
   transform-origin: top left;
 }
