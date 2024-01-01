@@ -518,6 +518,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -546,12 +553,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 1rem;
 }
 
+.top-2 {
+  top: 0.5rem;
+}
+
 .z-10 {
   z-index: 10;
 }
 
 .z-\[9999\] {
   z-index: 9999;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .mx-8 {
@@ -649,6 +664,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -713,6 +732,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 120px;
 }
 
+.max-w-3xl {
+  max-width: 48rem;
+}
+
 .origin-top-left {
   transform-origin: top left;
 }
@@ -739,6 +762,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: pointer;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -755,6 +782,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .self-end {
   align-self: flex-end;
 }
@@ -765,6 +796,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .scroll-smooth {
@@ -851,6 +886,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-75 {
+  --tw-bg-opacity: 0.75;
 }
 
 .fill-current {
@@ -1039,6 +1083,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-sky-500 {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .opacity-60 {

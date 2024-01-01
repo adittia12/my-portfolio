@@ -1,310 +1,398 @@
 <!DOCTYPE html>
-<html lang="en" class="transition duration-500 scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="scroll-smooth transition duration-500">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="dist/css/final.css">
+    <link rel="stylesheet" href="dist/css/final.css" />
     <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     </script>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Header Start -->
-    <header class="absolute top-0 left-0 z-10 flex items-center w-full bg-transparent">
-        <div class="container">
-            <div class="relative flex items-center justify-between">
-                <div class="px-4">
-                    <a href="#home" class="block py-6 text-lg font-bold text-primary">AA_12</a>
-                </div>
-                <div class="flex items-center px-4">
-                    <button id="hamburger" name="hamburger" type="button" class="absolute block right-4 lg:hidden">
-                        <span class="transition duration-300 ease-in-out origin-top-left hamburger-line"></span>
-                        <span class="transition duration-300 ease-in-out hamburger-line"></span>
-                        <span class="transition duration-300 ease-in-out origin-bottom-left hamburger-line"></span>
-                    </button>
+    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <a href="#home" class="block py-6 text-lg font-bold text-primary">AA_12</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+            </button>
 
-                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent">
-                        <ul class="block lg:flex">
-                            <li class="group">
-                                <a href="#home" class="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white">Beranda</a>
-                            </li>
-                            <li class="group">
-                                <a href="#about" class="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white">About Me</a>
-                            </li>
-                            <li class="group">
-                                <a href="#portfolio" class="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
-                            </li>
-                            <li class="group">
-                                <a href="#clients" class="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white">Clients</a>
-                            </li>
-                            <li class="group">
-                                <a href="#certification" class="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white">Certification</a>
-                            </li>
-                            <li class="group">
-                                <a href="#contact" class="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
-                            </li>
-                            <li class="flex items-center pl-8 mt-3 lg:mt-0">
-                                <div class="flex">
-                                    <span class="mr-2 text-sm text-slate-500">Light</span>
-                                    <input type="checkbox" class="hidden" name="" id="dark-toggle">
-                                    <label for="dark-toggle">
-                                        <div class="flex items-center h-5 p-1 rounded-full cursor-pointer w-9 bg-slate-500">
-                                            <div class="w-4 h-4 transition duration-300 ease-in-out bg-white rounded-full toggle-circle"></div>
-                                        </div>
-                                    </label>
-                                    <span class="ml-2 text-sm text-slate-500">Dark</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            <nav
+              id="nav-menu"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Beranda</a>
+                </li>
+                <li class="group">
+                  <a href="#about" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">About Me</a>
+                </li>
+                <li class="group">
+                  <a href="#portfolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
+                </li>
+                <li class="group">
+                  <a href="#clients" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Clients</a>
+                </li>
+                <li class="group">
+                  <a href="#certification" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Certification</a>
+                </li>
+                <li class="group">
+                  <a href="#contact" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
+                </li>
+                <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                    <input type="checkbox" class="hidden" name="" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
+      </div>
     </header>
     <!-- Header End -->
-    
+
     <!-- Hero Section Statr -->
     <section id="home" class="pt-36 dark:bg-dark">
-        <div class="container">
-            <div class="flex flex-wrap">
-                <div class="self-center w-full px-4 lg:w-1/2">
-                    <h1 class="text-base font-semibold text-primary md:text-xl">Hello everyone,👋 I am <span class="block mt-1 text-4xl font-bold text-dark lg:text-5xl dark:text-white">Adittia Agustian</span></h1>
-                    <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl"><span class="text-dark dark:text-white">Bachelor of Computer Science</span>, Information Systems study program, <span class="text-dark dark:text-white">University Buana Perjuangan Karawang.</span></h2>
-                    <p class="mb-10 font-medium leading-relaxed text-secondary">Learn and seek new experiences about programmers. <span class="font-bold text-dark dark:text-white">🧑‍💻</span></p>
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-primary md:text-xl">Hello everyone,👋 I am <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Adittia Agustian</span></h1>
+            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
+              <span class="text-dark dark:text-white">Bachelor of Computer Science</span>, Information Systems study program, <span class="text-dark dark:text-white">University Buana Perjuangan Karawang.</span>
+            </h2>
+            <p class="mb-10 font-medium leading-relaxed text-secondary">Learn and seek new experiences about programmers. <span class="font-bold text-dark dark:text-white">🧑‍💻</span></p>
 
-                    <a href="https://www.linkedin.com/in/adittia-agustian/" class="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-full bg-primary hover:shadow-lg hover:opacity-80" target="_blank">Linkedin Me</a>
-                    <a href="dist/doc/CV_Adittia Agustian.docx.pdf" class="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-full bg-primary hover:shadow-lg hover:opacity-80" target="_blank">CV Me</a>
-                </div>
-                <div class="self-end w-full px-4 lg:w-1/2">
-                    <div class="relative mt-10 lg:mt-9 lg:right-0">
-                        <img src="dist/img/profile.png" alt="Adittia Agustian" class="relative z-10 mx-auto mx-w-full">
-                        <span class="absolute -translate-x-1/2 -bottom-0 left-1/2 md:scale-125">
-                            <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#14b8a6" d="M54.2,-68.2C66,-54.6,68.6,-33.6,67.3,-15.6C66,2.4,60.8,17.2,53.5,31.7C46.1,46.2,36.6,60.2,22.7,67.4C8.9,74.7,-9.3,75.1,-27.3,70.5C-45.3,65.9,-63.1,56.3,-73.9,41C-84.8,25.7,-88.7,4.7,-83.7,-13.1C-78.6,-30.9,-64.5,-45.5,-49,-58.4C-33.6,-71.4,-16.8,-82.8,2.2,-85.4C21.1,-88,42.3,-81.8,54.2,-68.2Z" transform="translate(100 100) scale(1.1)" />
-                              </svg>
-                        </span>
-                    </div>
-                </div>
+            <a href="https://www.linkedin.com/in/adittia-agustian/" class="rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg" target="_blank"
+              >Linkedin Me</a
+            >
+            <a href="dist/doc/CV_Adittia Agustian.docx.pdf" class="rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg" target="_blank">CV Me</a>
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:right-0 lg:mt-9">
+              <img src="dist/img/profile.png" alt="Adittia Agustian" class="mx-w-full relative z-10 mx-auto" />
+              <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill="#14b8a6"
+                    d="M54.2,-68.2C66,-54.6,68.6,-33.6,67.3,-15.6C66,2.4,60.8,17.2,53.5,31.7C46.1,46.2,36.6,60.2,22.7,67.4C8.9,74.7,-9.3,75.1,-27.3,70.5C-45.3,65.9,-63.1,56.3,-73.9,41C-84.8,25.7,-88.7,4.7,-83.7,-13.1C-78.6,-30.9,-64.5,-45.5,-49,-58.4C-33.6,-71.4,-16.8,-82.8,2.2,-85.4C21.1,-88,42.3,-81.8,54.2,-68.2Z"
+                    transform="translate(100 100) scale(1.1)"
+                  />
+                </svg>
+              </span>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Hero Section End -->
 
     <!-- About Section Stater -->
     <section id="about" class="pb-32 pt-36 dark:bg-dark">
-        <div class="container">
-            <div class="flex flex-wrap">
-                <div class="w-full px-4 mb-10 lg:w-1/2">
-                    <h4 class="mb-3 text-lg font-bold uppercase text-primary">About Me</h4>
-                    <h2 class="max-w-md mb-5 text-3xl font-bold text-dark lg:text-4xl dark:text-white">A Learning programming is fun!</h2>
-                    <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Can refine logical thinking, solve coding problems, gain expertise in programming languages, and seek practical experience in the IT field.</p>
-                </div>
-                <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="mb-4 text-2xl font-semibold text-dark lg:text-3xl lg:pt-10 dark:text-white">Let's be friends</h3>
-                    <p class="mb-6 text-base font-medium text-secondary lg:text-lg">Let's be friends on social media and youtube to communicate with each other.</p>
-                    <div class="flex items-center">
-                        <!-- youtube -->
-                        <a class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://www.youtube.com/channel/UCfDRx-02QTIrcERiPhf5uKw/featured" target="_blank">
-                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        </a>
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h4 class="mb-3 text-lg font-bold uppercase text-primary">About Me</h4>
+            <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">A Learning programming is fun!</h2>
+            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Can refine logical thinking, solve coding problems, gain expertise in programming languages, and seek practical experience in the IT field.</p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Let's be friends</h3>
+            <p class="mb-6 text-base font-medium text-secondary lg:text-lg">Let's be friends on social media and youtube to communicate with each other.</p>
+            <div class="flex items-center">
+              <!-- youtube -->
+              <a
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                href="https://www.youtube.com/channel/UCfDRx-02QTIrcERiPhf5uKw/featured"
+                target="_blank"
+              >
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>YouTube</title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
 
-                        <!-- instagram -->
-                        <a class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://www.instagram.com/adit_august08/" target="_blank">
-                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
-                        </a>
+              <!-- instagram -->
+              <a
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                href="https://www.instagram.com/adit_august08/"
+                target="_blank"
+              >
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
 
-                        <!-- Twiter -->
-                        <a class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://www.instagram.com/adit_august08/" target="_blank">
-                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                        </a>
+              <!-- Twiter -->
+              <a
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                href="https://www.instagram.com/adit_august08/"
+                target="_blank"
+              >
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Twitter</title>
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
 
-                        <!-- Github -->
-                        <a class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://github.com/adittia12" target="_blank">
-                            <svg role="img" width="20" class="fill-current"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </a>
-                    </div>
-                </div>
+              <!-- Github -->
+              <a class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://github.com/adittia12" target="_blank">
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>GitHub</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- About Section End -->
 
     <!-- Portfolio Section Start -->
-    <section id="portfolio" class="pb-16 pt-36 bg-slate-100 dark:bg-slate-800">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="max-w-xl mx-auto mb-16 text-center">
-                    <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
-                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-white">Latest Projects</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Application Project that has been completed, and is in the development process.</p>
-                </div>
-            </div>
-
-            <div class="flex flex-wrap justify-center w-full px-4 xl:w-10/12 xl:mx-auto">
-                <div class="p-4 mb-12 md:w-1/2">
-                    <div class="overflow-hidden rounded-md shadow-md">
-                        <img src="dist/img/portfolio/1.jpeg" alt="App Penggajian" width="w-full">
-                    </div>
-                    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App Penggajian</h3>
-                    <p class="text-base font-medium text-secondary">Payroll Web Application by taking the case at Wirasaba Vocational School, which processes salary data that still uses excel and does not yet have a digital-based payroll system.</p>
-                </div>
-                <div class="p-4 mb-12 md:w-1/2">
-                    <div class="overflow-hidden rounded-md shadow-md">
-                        <img src="dist/img/portfolio/1.png" alt="company profile" width="w-full">
-                    </div>
-                    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Company Profile PT</h3>
-                    <p class="text-base font-medium text-secondary">Mechatronic Control PT Montivator information, and provide a responsive system</p>
-                </div>
-                <div class="p-4 mb-12 md:w-1/2">
-                    <div class="overflow-hidden rounded-md shadow-md">
-                        <img src="dist/img/portfolio/2.png" alt="App Machining" width="w-full">
-                    </div>
-                    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App Web Machining</h3>
-                    <p class="text-base font-medium text-secondary">App machining is a monitoring application to view employee data and report setters to the admin.</p>
-                </div>
-                
-                <div class="p-4 mb-12 md:w-1/2">
-                    <div class="overflow-hidden rounded-md shadow-md">
-                        <img src="dist/img/portfolio/5.png" alt="E-UMKM Balonggandu" width="w-full">
-                    </div>
-                    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App WEB E-Umkm Balonggandu</h3>
-                    <p class="text-base font-medium text-secondary">UMKM in Balonggandu has many types of MSMEs that are well-known in the Karawang district. with the e-UMKM web app to assist in digital marketing and product promotion through internet networks.</p>
-                </div>
-                <div class="p-4 mb-12 md:w-1/2">
-                    <div class="overflow-hidden rounded-md shadow-md">
-                        <img src="dist/img/portfolio/6.png" alt="App Web Fasilitas Karyawan" width="w-full">
-                    </div>
-                    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App WEB Fasiltas Karyawan PERUM PERURI</h3>
-                    <p class="text-base font-medium text-secondary">The Employee Facility web application is a monthly reporting system related to PERUM PERURI Employee Facilities. which provides master data for Employee Facilities and monthly financial reporting.</p>
-                </div>
-                <div class="p-4 mb-12 md:w-1/2">
-                    <div class="overflow-hidden rounded-md shadow-md">
-                        <img src="dist/img/portfolio/10.png" alt="App Web BANREK" width="w-full">
-                    </div>
-                    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App WEB Bantuan Rekreasi</h3>
-                    <p class="text-base font-medium text-secondary">This BANREK web application is a data management system for PERUM PERURI's employee recreation assistance which was developed to be made into one complete application. in facilitating the data collection and reporting of Employee Recreation Assistance data.</p>
-                </div>
-                <div class="p-4 mb-12 md:w-1/2">
-                    <div class="overflow-hidden rounded-md shadow-md">
-                        <img src="dist/img/portfolio/9.png" alt="App Web MONBI" width="w-full">
-                    </div>
-                    <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App WEB Monitoring Biaya</h3>
-                    <p class="text-base font-medium text-secondary">The purpose is to create an innovation and develop a new system to facilitate automated cost monitoring. It will be equipped with an integrated and centralized database, along with monthly budget reports and checks on annual budget expenses. With the existence of this system, it can have a positive impact and make cost monitoring easier.</p>
-                </div>
-            </div>
+    <section id="portfolio" class="bg-slate-100 pb-16 pt-36 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Latest Projects</h2>
+            <p class="text-md font-medium text-secondary md:text-lg">Application Project that has been completed, and is in the development process.</p>
+          </div>
         </div>
+
+        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portfolio/1.jpeg" alt="App Penggajian" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App Penggajian</h3>
+            <p class="text-base font-medium text-secondary">
+              Payroll Web Application by taking the case at Wirasaba Vocational School, which processes salary data that still uses excel and does not yet have a digital-based payroll system.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portfolio/1.png" alt="company profile" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Company Profile PT</h3>
+            <p class="text-base font-medium text-secondary">Mechatronic Control PT Montivator information, and provide a responsive system</p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portfolio/2.png" alt="App Machining" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App Web Machining</h3>
+            <p class="text-base font-medium text-secondary">App machining is a monitoring application to view employee data and report setters to the admin.</p>
+          </div>
+
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portfolio/5.png" alt="E-UMKM Balonggandu" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App WEB E-Umkm Balonggandu</h3>
+            <p class="text-base font-medium text-secondary">
+              UMKM in Balonggandu has many types of MSMEs that are well-known in the Karawang district. with the e-UMKM web app to assist in digital marketing and product promotion through internet networks.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portfolio/6.png" alt="App Web Fasilitas Karyawan" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App WEB Fasiltas Karyawan PERUM PERURI</h3>
+            <p class="text-base font-medium text-secondary">
+              The Employee Facility web application is a monthly reporting system related to PERUM PERURI Employee Facilities. which provides master data for Employee Facilities and monthly financial reporting.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portfolio/10.png" alt="App Web BANREK" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App WEB Bantuan Rekreasi</h3>
+            <p class="text-base font-medium text-secondary">
+              This BANREK web application is a data management system for PERUM PERURI's employee recreation assistance which was developed to be made into one complete application. in facilitating the data collection and reporting of
+              Employee Recreation Assistance data.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portfolio/9.png" alt="App Web MONBI" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">App WEB Monitoring Biaya</h3>
+            <p class="text-base font-medium text-secondary">
+              The purpose is to create an innovation and develop a new system to facilitate automated cost monitoring. It will be equipped with an integrated and centralized database, along with monthly budget reports and checks on annual
+              budget expenses. With the existence of this system, it can have a positive impact and make cost monitoring easier.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/portfolio/Dashboard smart-loket.png" alt="App Web Smart-Loket" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Web App Smart-Loket</h3>
+            <p class="text-base font-medium text-secondary">
+              The aim is to create innovation and develop a new system to facilitate digital-based counter service. This system will be equipped with an integrated and centralized database. Additionally, reports from each counter service
+              conducted will be stored in the database and monitored through the smart counter monitoring system available on the smart counter. With the existence of this system, it can have a positive impact and ease the process of
+              counter service.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Portfolio Section End -->
 
     <!-- Clients Section Start -->
-    <section class="pb-32 pt-36 bg-slate-700 dark:bg-slate-300" id="clients">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="mx-auto mb-16 text-center">
-                    <h4 class="mb-2 text-lg font-semibold text-primary">Clients</h4>
-                    <h2 class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl dark:text-dark">The ones who have collaborated</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Has collaborated with several institutions, one of which is Buana Perjuangan University, Karawang to develop an E-cycle Web in the field of LPPM. Then do research with lecturers to create a Karawang Regency library system based on WEBSITE. Then create a system at PERUM PERURI in the SDMO (Operational Human Resources) field to manage employee facility data, Employee Recreation Assistance, and employee data management data at PERUM PERURI's subsidiary.</p>
-                </div>
+    <section class="bg-slate-700 pb-32 pt-36 dark:bg-slate-300" id="clients">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Clients</h4>
+            <h2 class="mb-4 text-3xl font-bold text-white dark:text-dark sm:text-4xl lg:text-5xl">The ones who have collaborated</h2>
+            <p class="text-md font-medium text-secondary md:text-lg">
+              Has collaborated with several institutions, one of which is Buana Perjuangan University, Karawang to develop an E-cycle Web in the field of LPPM. Then do research with lecturers to create a Karawang Regency library system
+              based on WEBSITE. Then create a system at PERUM PERURI in the SDMO (Operational Human Resources) field to manage employee facility data, Employee Recreation Assistance, and employee data management data at PERUM PERURI's
+              subsidiary.
+            </p>
+          </div>
 
-                <div class="w-full px-4">
-                    <div class="flex flex-wrap items-center justify-center">
-                        <a href="#" class="max-w-[80px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                            <img src="dist/img/clients/UBP.png" alt="UBP">
-                        </a>
-                        <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                            <img src="dist/img/clients/perpus.png" alt="Perpusip">
-                        </a>
-                        <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
-                            <img src="dist/img/clients/peruri.png" alt="Perum Peruri">
-                        </a>
-                    </div>
-                </div>
+          <div class="w-full px-4">
+            <div class="flex flex-wrap items-center justify-center">
+              <a href="#" class="mx-4 max-w-[80px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+                <img src="dist/img/clients/UBP.png" alt="UBP" />
+              </a>
+              <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+                <img src="dist/img/clients/perpus.png" alt="Perpusip" />
+              </a>
+              <a href="#" class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
+                <img src="dist/img/clients/peruri.png" alt="Perum Peruri" />
+              </a>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Clients Section End -->
 
     <!-- Certification Section Start -->
-    <section class="pb-32 pt-36 bg-slate-100 dark:bg-dark" id="certification">
-        <div class="container">
-            <div class="w-full px-4">
-                <div class="max-w-xl mx-auto mb-16 text-center">
-                    <h4 class="mb-2 text-lg font-semibold text-primary">Certification</h4>
-                    <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl dark:text-white">My Certification</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">My certification serves as evidence of my skills and dedication.</p>
-                </div>
-            </div>
-
-            <div class="flex flex-wrap">
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl dark:bg-slate-800">
-                        <img src="dist/img/certification/Sertifikasi BNSP WEB Development_page-0001.jpg" alt="programming" class="w-full">
-                        <div class="px-6 py-8">
-                            <h3>
-                                <a href="https://drive.google.com/file/d/1AV_og-AHm4HOUX1dPrRDCgXEp_iPv09b/view?usp=sharing" class="block mb-3 text-xl font-semibold truncate text-dark hover:text-primary dark:text-white" target="_blank">Certification Web Development</a>
-                            </h3>
-                            <p class="mb-6 text-base font-medium text-secondary">BNSP certification serves as evidence that we are competent in the chosen field.</p>
-                            <a href="https://drive.google.com/file/d/1AV_og-AHm4HOUX1dPrRDCgXEp_iPv09b/view?usp=sharing" class="px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary hover:opacity-80" target="_blank">View certification</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl dark:bg-slate-800">
-                        <img src="dist/img/certification/HAKI_ADITTIA AGUSTIAN_page-0001.jpg" alt="Mechanical Keyboard" class="w-full">
-                        <div class="px-6 py-8">
-                            <h3>
-                                <a href="https://drive.google.com/file/d/1VXHo0ZrXkUGFpUqXHf8EqaVcX9FmRGTo/view?usp=sharing" class="block mb-3 text-xl font-semibold truncate text-dark hover:text-primary dark:text-white" target="_blank">Certification HAKI</a>
-                            </h3>
-                            <p class="mb-6 text-base font-medium text-secondary">This HAKI certification is the outcome of creating an article on web application development using Laravel version 9.</p>
-                            <a href="https://drive.google.com/file/d/1VXHo0ZrXkUGFpUqXHf8EqaVcX9FmRGTo/view?usp=sharing" class="px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary hover:opacity-80" target="_blank">View certification</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl dark:bg-slate-800">
-                        <img src="dist/img/certification/Webdev_Pejuang Codding_Adittia Agustian (1).jpg" alt="Coffee" class="w-full">
-                        <div class="px-6 py-8">
-                            <h3>
-                                <a href="" class="block mb-3 text-xl font-semibold truncate text-dark hover:text-primary dark:text-white">Competition Certification</a>
-                            </h3>
-                            <p class="mb-6 text-base font-medium text-secondary">Participating in the national-level Web Development competition organized by Sriwijaya University.</p>
-                            <a href="https://drive.google.com/file/d/1EjBCn2RRnLU-4BO3vV_DtFQr0MAnLSb6/view?usp=sharing" class="px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary hover:opacity-80" target="_blank">View certification</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl dark:bg-slate-800">
-                        <img src="dist/img/certification/00342-MAGENTA-FHCI01-8-23_page-0001.jpg" alt="Coffee" class="w-full">
-                        <div class="px-6 py-8">
-                            <h3>
-                                <a href="" class="block mb-3 text-xl font-semibold truncate text-dark hover:text-primary dark:text-white">MAGENTA Certificate</a>
-                            </h3>
-                            <p class="mb-6 text-base font-medium text-secondary">He has interned at BUMN in the Talented Generation Internship program, as HR Administration staff and as a fullstack web development team in system creation.</p>
-                            <a href="https://drive.google.com/file/d/1c5X--5zVZSMiD2YzNREA0C7zGBudYD0a/view?usp=sharing" class="px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary hover:opacity-80" target="_blank">View certification</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="mb-10 overflow-hidden bg-white shadow-lg rounded-xl dark:bg-slate-800">
-                        <img src="dist/img/certification/Sertifikat PMMB (1)_page-0001.jpg" alt="Coffee" class="w-full">
-                        <div class="px-6 py-8">
-                            <h3>
-                                <a href="" class="block mb-3 text-xl font-semibold truncate text-dark hover:text-primary dark:text-white">PMMB Certificate</a>
-                            </h3>
-                            <p class="mb-6 text-base font-medium text-secondary">Internship at BUMN PMMB Program, as HR Administration staff and as a fullstack web development team in system creation.</p>
-                            <a href="https://drive.google.com/file/d/1n26GoFLIcYs4qeqDgnKEcxpVXtAn7pSO/view?usp=drive_link" class="px-4 py-2 text-sm font-medium text-white rounded-lg bg-primary hover:opacity-80" target="_blank">View certification</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="bg-slate-100 pb-32 pt-36 dark:bg-dark" id="certification">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Certification</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">My Certification</h2>
+            <p class="text-md font-medium text-secondary md:text-lg">My certification serves as evidence of my skills and dedication.</p>
+          </div>
         </div>
+
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
+              <img src="dist/img/certification/Sertifikasi BNSP WEB Development_page-0001.jpg" alt="programming" class="w-full" />
+              <div class="px-6 py-8">
+                <h3>
+                  <a href="https://drive.google.com/file/d/1AV_og-AHm4HOUX1dPrRDCgXEp_iPv09b/view?usp=sharing" class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white" target="_blank"
+                    >Certification Web Development</a
+                  >
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">BNSP certification serves as evidence that we are competent in the chosen field.</p>
+                <a href="https://drive.google.com/file/d/1AV_og-AHm4HOUX1dPrRDCgXEp_iPv09b/view?usp=sharing" class="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:opacity-80" target="_blank">View certification</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
+              <img src="dist/img/certification/HAKI_ADITTIA AGUSTIAN_page-0001.jpg" alt="Mechanical Keyboard" class="w-full" />
+              <div class="px-6 py-8">
+                <h3>
+                  <a href="https://drive.google.com/file/d/1VXHo0ZrXkUGFpUqXHf8EqaVcX9FmRGTo/view?usp=sharing" class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white" target="_blank"
+                    >Certification HAKI</a
+                  >
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">This HAKI certification is the outcome of creating an article on web application development using Laravel version 9.</p>
+                <a href="https://drive.google.com/file/d/1VXHo0ZrXkUGFpUqXHf8EqaVcX9FmRGTo/view?usp=sharing" class="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:opacity-80" target="_blank">View certification</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
+              <img src="dist/img/certification/Webdev_Pejuang Codding_Adittia Agustian (1).jpg" alt="Coffee" class="w-full" />
+              <div class="px-6 py-8">
+                <h3>
+                  <a href="" class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Competition Certification</a>
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">Participating in the national-level Web Development competition organized by Sriwijaya University.</p>
+                <a href="https://drive.google.com/file/d/1EjBCn2RRnLU-4BO3vV_DtFQr0MAnLSb6/view?usp=sharing" class="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:opacity-80" target="_blank">View certification</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
+              <img src="dist/img/certification/00342-MAGENTA-FHCI01-8-23_page-0001.jpg" alt="Coffee" class="w-full" />
+              <div class="px-6 py-8">
+                <h3>
+                  <a href="" class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">MAGENTA Certificate</a>
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">He has interned at BUMN in the Talented Generation Internship program, as HR Administration staff and as a fullstack web development team in system creation.</p>
+                <a href="https://drive.google.com/file/d/1c5X--5zVZSMiD2YzNREA0C7zGBudYD0a/view?usp=sharing" class="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:opacity-80" target="_blank">View certification</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
+              <img src="dist/img/certification/Sertifikat PMMB (1)_page-0001.jpg" alt="Coffee" class="w-full" />
+              <div class="px-6 py-8">
+                <h3>
+                  <a href="" class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">PMMB Certificate</a>
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">Internship at BUMN PMMB Program, as HR Administration staff and as a fullstack web development team in system creation.</p>
+                <a href="https://drive.google.com/file/d/1n26GoFLIcYs4qeqDgnKEcxpVXtAn7pSO/view?usp=drive_link" class="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:opacity-80" target="_blank">View certification</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800">
+              <img src="dist/img/certification/ADITTIA AGUSTIAN-837613_page-0001.jpg" alt="Google Event 2023" class="w-full" />
+              <div class="px-6 py-8">
+                <h3>
+                  <a href="" class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white">Certification Google Event Developers 2023</a>
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">
+                  Google Developers Certification Events are held in several areas, one of which is Bandung. which can provide more knowledge about the world of programmers and learn more about technological developments developed by Google
+                  itself.
+                </p>
+                <a href="https://drive.google.com/file/d/1VvNFF-NQMoCYNf-Vl2h2WI55DOGaihdq/view?usp=sharing" class="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:opacity-80" target="_blank">View certification</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Blog Section End -->
 
@@ -344,88 +432,115 @@
 
     <!-- Footer Start -->
     <footer class="pt-24 pb-12 dark:bg-slate-800">
-        <div class="container">
-            <div class="flex flex-wrap">
-                <div class="w-full px-4 mb-12 font-medium text-slate-300 md:w-1/3">
-                    <h2 class="mb-5 text-4xl font-bold text-white">AA_12</h2>
-                    <h3 class="mb-2 text-2xl font-bold">Contact Me</h3>
-                    <p>agustianaa12adit@gmail.com</p>
-                    <p>Jl. Menati 1, Ds. Puseurjaya, NO.12</p>
-                    <p>Karawang</p>
-                </div>
-                <div class="px-4 mb-12 w-fu md:w-1/3">
-                    <h3 class="mb-5 text-xl font-semibold text-white">Category</h3>
-                    <ul class="text-slate-300">
-                        <li>
-                            <a href="#" class="inline-block mb-3 text-base hover:text-primary">Programming</a>
-                        </li>
-                        <li>
-                            <a href="#" class="inline-block mb-3 text-base hover:text-primary">Technology</a>
-                        </li>
-                        <li>
-                            <a href="#" class="inline-block mb-3 text-base hover:text-primary">Gaya Hidup</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w-full px-4 mb-12 md:w-1/3">
-                    <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
-                    <ul class="text-slate-300">
-                        <li>
-                            <a href="#home" class="inline-block mb-3 text-base hover:text-primary">Beranda</a>
-                        </li>
-                        <li>
-                            <a href="#about" class="inline-block mb-3 text-base hover:text-primary">Tentang Saya</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio" class="inline-block mb-3 text-base hover:text-primary">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#clients" class="inline-block mb-3 text-base hover:text-primary">Clients</a>
-                        </li>
-                        <li>
-                            <a href="#certification" class="inline-block mb-3 text-base hover:text-primary">Certification</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="inline-block mb-3 text-base hover:text-primary">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="w-full pt-10 border-t border-slate-700">
-                <div class="flex items-center justify-center mb-5">
-                    <!-- youtube -->
-                    <a class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://www.youtube.com/channel/UCfDRx-02QTIrcERiPhf5uKw/featured" target="_blank">
-                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    </a>
-
-                    <!-- instagram -->
-                    <a class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://www.instagram.com/adit_august08/" target="_blank">
-                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
-                    </a>
-
-                    <!-- Twiter -->
-                    <a class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://www.instagram.com/adit_august08/" target="_blank">
-                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                    </a>
-
-                    <!-- Github -->
-                    <a class="flex items-center justify-center mr-3 border rounded-full w-9 h-9 border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://github.com/adittia12" target="_blank">
-                        <svg role="img" width="20" class="fill-current"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                    </a>
-                </div>
-                <p class="text-xs font-medium text-center text-slate-500">My Portfolio <a href="https://instagram.com/adit_august08" target="_blank" class="font-bold text-primary ">Adittia Agustian</a>, Use <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500 ">Tailwind CSS</a>.</p>
-            </div>
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h2 class="mb-5 text-4xl font-bold text-white">AA_12</h2>
+            <h3 class="mb-2 text-2xl font-bold">Contact Me</h3>
+            <p>agustianaa12adit@gmail.com</p>
+            <p>Jl. Menati 1, Ds. Puseurjaya, NO.12</p>
+            <p>Karawang</p>
+          </div>
+          <div class="w-fu mb-12 px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Category</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#" class="mb-3 inline-block text-base hover:text-primary">Programming</a>
+              </li>
+              <li>
+                <a href="#" class="mb-3 inline-block text-base hover:text-primary">Technology</a>
+              </li>
+              <li>
+                <a href="#" class="mb-3 inline-block text-base hover:text-primary">Gaya Hidup</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mb-12 w-full px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#home" class="mb-3 inline-block text-base hover:text-primary">Beranda</a>
+              </li>
+              <li>
+                <a href="#about" class="mb-3 inline-block text-base hover:text-primary">Tentang Saya</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="mb-3 inline-block text-base hover:text-primary">Portfolio</a>
+              </li>
+              <li>
+                <a href="#clients" class="mb-3 inline-block text-base hover:text-primary">Clients</a>
+              </li>
+              <li>
+                <a href="#certification" class="mb-3 inline-block text-base hover:text-primary">Certification</a>
+              </li>
+              <li>
+                <a href="#contact" class="mb-3 inline-block text-base hover:text-primary">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div class="w-full border-t border-slate-700 pt-10">
+          <div class="mb-5 flex items-center justify-center">
+            <!-- youtube -->
+            <a
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              href="https://www.youtube.com/channel/UCfDRx-02QTIrcERiPhf5uKw/featured"
+              target="_blank"
+            >
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>YouTube</title>
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+
+            <!-- instagram -->
+            <a class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://www.instagram.com/adit_august08/" target="_blank">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                />
+              </svg>
+            </a>
+
+            <!-- Twiter -->
+            <a class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://www.instagram.com/adit_august08/" target="_blank">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Twitter</title>
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+
+            <!-- Github -->
+            <a class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white" href="https://github.com/adittia12" target="_blank">
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>GitHub</title>
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
+          </div>
+          <p class="text-center text-xs font-medium text-slate-500">
+            My Portfolio <a href="https://instagram.com/adit_august08" target="_blank" class="font-bold text-primary">Adittia Agustian</a>, Use
+            <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind CSS</a>.
+          </p>
+        </div>
+      </div>
     </footer>
     <!-- Footer End -->
 
     <!-- Back To Start -->
-    <a href="#home" class="fixed hidden justify-center items-center bottom-4 right-4 z-[9999] h-14 w-14 rounded-full bg-primary p-4 hover:animate-pulse" id="to-top">
-        <span class="block w-5 h-5 mt-2 rotate-45 border-t-2 border-l-2"></span>
+    <a href="#home" class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse" id="to-top">
+      <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
     </a>
     <!-- Back To End -->
 
     <script src="dist/js/script.js"></script>
-</body>
+  </body>
 </html>
